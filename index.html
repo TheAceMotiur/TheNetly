@@ -3,13 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Easily decode your Base64 encoded text with this simple and efficient online tool. Just type or paste your encoded text and get the decoded result instantly.">
-  <meta name="keywords" content="OneNetly, base64, base64 decoder, decode, decoding, online base64 decoder">
+  <meta name="description" content="Easily encode your images into Base64 format with this simple and efficient online tool. Just upload or drag and drop your image and get the encoded result instantly.">
+  <meta name="keywords" content="base64, base64 encoder, encode, encoding, online base64 encoder, image to base64">
   <link href="./css/output.css" rel="stylesheet">
-  <title>OneNetly - Simple & Efficient Base64 Decoder</title>
+  <title>Image to Base64 Encoder - Simple & Efficient Online Tool</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./icon.png">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354746037074515"
-     crossorigin="anonymous"></script>
+
+     <style>
+        .drop-zone {
+          border: 2px dashed #ccc;
+          border-radius: 0.5rem;
+          padding: 5rem;
+          text-align: center;
+          cursor: pointer;
+          transition: background-color 0.2s;
+        }
+        .drop-zone:hover {
+          background-color: #f9f9f9;
+        }
+        .drop-zone input[type="file"] {
+          display: none;
+        }
+      </style>
 </head>
 
 <body>
@@ -19,7 +34,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
         </svg>
-        <a href="/"><span class="ml-3 text-xl">OneNetly</span></a>
+        <a href="/"><span class="ml-3 text-xl">TheNetly</span></a>
       </a>
       <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
         <a href="/terms.html" class="mr-5 hover:text-gray-900">Terms and Conditions</a>
@@ -33,85 +48,161 @@
 <div class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-4">
 
     <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl">
-      <h1 class="text-3xl font-bold mb-4">Base64 Decoder</h1>
-      <p class="mb-4 text-gray-600">Welcome to our OneNetly Base64 Decoder, a simple and efficient online tool for decoding your Base64 encoded text back into its original format. Just paste your Base64 encoded text and get the decoded result instantly. Perfect for developers and anyone who needs to decode data quickly.</p>
-  
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="inputText">Text to decode:</label>
-        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="inputText" type="text" placeholder="Enter Base64 encoded text...">
+      <h1 class="text-3xl font-bold mb-4">Image to Base64 Encoder</h1>
+      <p class="mb-4 text-gray-600">Welcome to our Image to Base64 Encoder, a simple and efficient online tool for encoding your images into Base64 format. This tool is perfect for developers and anyone who needs to encode images for use in web applications, data URIs, or CSS backgrounds. Just upload or drag and drop your image and get the encoded result instantly.</p>
+      <p class="mb-5">Choose an image or drag and drop it here:</p>
+      <div class="drop-zone mb-5">
+        <input type="file" id="inputImage" accept="image/*">
+        <p class="text-gray-500">Drag and drop an image or click here to choose</p>
       </div>
-      <div class="mt-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="decodedText">Decoded result:</label>
-        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="decodedText" rows="5" readonly></textarea>
-      </div>
-      <button id="copyButton" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4" type="button">Copy</button>
-  
-      <h3 class="text-xl font-bold mt-4 mb-4">The Importance of Base64 Decoding</h3>
-      <p class="mb-4 text-gray-600">Base64 decoding plays a critical role in various applications, as it allows for the retrieval of the original binary data from encoded text. It is used in web development, email attachments, and data serialization to ensure that the binary data remains accessible and functional after being transmitted or stored in a text-based format.</p>
-      <h3 class="text-xl font-bold mt-4 mb-4">Decoding Base64 in Web Applications</h3>
-      <p class="mb-4 text-gray-600">In web applications, Base64 decoding is often used to render embedded images or other binary resources that have been encoded as text. By decoding the Base64 string, the browser can display the original binary data, such as an image or a font, directly on the web page, enhancing the user experience and reducing latency.</p>
-      <h3 class="text-xl font-bold mt-4 mb-4">Base64 Decoding in Email Attachments</h3>
-      <p class="mb-4 text-gray-600">Email protocols typically only support text-based data, which makes Base64 encoding and decoding essential for transmitting binary files as attachments. When an email client receives a message with an encoded attachment, it decodes the Base64 data to reveal the original binary file, allowing the recipient to access and interact with the attachment.</p>
-      <h3 class="text-xl font-bold mt-4 mb-4">Data Serialization with Base64 Decoding</h3>
-      <p class="mb-4 text-gray-600">Base64 decoding is also used in data serialization, a process that involves converting complex data structures into a text-based format for storage or transmission. By utilizing Base64 encoding and decoding, developers can store and retrieve binary data within serialized text formats like JSON and XML, enabling more versatile data management and communication.</p>
-      <h3 class="text-xl font-bold mt-4 mb-4">Decoding Base64 in Programming Languages</h3>
-      <p class="mb-4 text-gray-600">Most modern programming languages, such as Python, JavaScript, and PHP, provide built-in support for Base64 decoding. These libraries offer simple and efficient methods for converting Base64-encoded strings back into their original binary data, making it easy for developers to work with encoded data within their applications.</p>
-      <h3 class="text-xl font-bold mt-4 mb-4">Performance Considerations in Base64 Decoding</h3>
-      <p class="mb-4 text-gray-600">While Base64 decoding is generally efficient, it can become a performance bottleneck when dealing with large amounts of encoded data. Developers should be mindful of the potential impact on performance when using Base64 decoding in their applications and consider alternative solutions, such as binary data streaming, when handling large files or data sets.</p>
-      <h3 class="text-xl font-bold mt-4 mb-4">Error Handling in Base64 Decoding</h3>
-      <p class="mb-4 text-gray-600">When decoding Base64 data, it is essential to implement proper error handling to account for potential issues, such as malformed input or incorrect padding. By incorporating robust error handling mechanisms, developers can ensure that their applications gracefully handle decoding errors and maintain a positive user experience.</p>
-      <h3 class="text-xl font-bold mt-4 mb-4">Security Considerations for Base64 Decoding</h3>
-      <p class="mb-4 text-gray-600">While Base64 decoding itself does not pose any security risks, it is crucial to remember that the decoded data might contain sensitive information or malicious content. Developers should take appropriate security measures, such as validating the decoded data and implementing proper access controls, to protect their applications and users from potential security threats.</p>
+      <label for="encodedText" class="block mb-2">Base64 encoded result:</label>
+      <textarea id="encodedText" rows="5" readonly class="w-full p-2 border border-gray-300 rounded mb-4"></textarea>
+      <button id="copyButton" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4">Copy</button>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Why Use Base64 Encoding for Images?</h2>
+      <p class="mb-4 text-gray-600">Base64 encoding is useful for embedding images directly into web pages, emails, or stylesheets. By converting the image to a Base64-encoded string, you eliminate the need for additional HTTP requests, which can improve loading speed and reduce server load.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Benefits of Base64 Encoded Images</h2>
+      <p class="mb-4 text-gray-600">Base64 encoded images offer various benefits, such as faster load times, decreased server requests, and increased compatibility with different platforms. This helps improve overall website performance and user experience.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Limitations of Base64 Encoding</h2>
+      <p class="mb-4 text-gray-600">Base64 encoding increases the size of an image by approximately 33%, which can lead to increased bandwidth usage. Additionally, some older browsers may not support Base64 encoding, resulting in compatibility issues.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Base64 Encoding vs. Image Formats</h2>
+      <p class="mb-4 text-gray-600">Base64 encoding is a different approach to displaying images compared to traditional image formats like JPEG, PNG, and GIF. While Base64 encoded images can be embedded directly into HTML or CSS, traditional image formats require separate files and HTTP requests.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">When to Use Base64 Encoded Images</h2>
+      <p class="mb-4 text-gray-600">Base64 encoding is best used for small images, such as icons, logos, or other decorative elements. Larger images should be saved in traditional formats to avoid significant increases in file size and bandwidth usage.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Optimizing Base64 Encoded Images</h2>
+      <p class="mb-4 text-gray-600">To optimize Base64 encoded images, it's important to compress the original image before encoding. This helps minimize the size increase caused by Base64 encoding and ensures faster loading times for your website or application.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Base64 Encoding in CSS</h2>
+      <p class="mb-4 text-gray-600">Base64 encoded images can be used as background images in CSS by including the encoded string directly in the background-image property. This allows for fewer HTTP requests and faster loading times, especially for small or decorative images.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Base64 Encoding in HTML</h2>
+      <p class="mb-4 text-gray-600">Base64 encoded images can be embedded directly into HTML using the src attribute of the img tag. This can help reduce the number of HTTP requests required for loading images on a webpage, improving load times and overall performance.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Base64 Encoding in JavaScript</h2>
+      <p class="mb-4 text-gray-600">JavaScript can be used to dynamically generate Base64 encoded images from an image file or URL. This allows for greater flexibility and control over the encoding process, making it easy to integrate Base64 encoding into web applications and scripts.</p>
 
-      <h3 class="text-xl font-bold mt-4 mb-4">Base64 Decoding in Data Compression</h3>
-      <p class="mb-4 text-gray-600">Base64 decoding can also be employed in data compression techniques, where binary data is first compressed and then encoded as a Base64 string. When decompressing the data, the Base64-encoded string is first decoded back into its binary form before being uncompressed. This approach allows for more efficient storage and transmission of compressed data while maintaining compatibility with text-based systems.</p>
-      <h3 class="text-xl font-bold mt-4 mb-4">Future Developments in Base64 Decoding</h3>
-      <p class="mb-4 text-gray-600">As technology evolves and new data formats and protocols emerge, the role of Base64 decoding may shift or expand. Developers should keep abreast of industry trends and advancements, ensuring that their applications continue to support Base64 decoding efficiently and securely while adapting to new challenges and opportunities in the digital landscape.</p>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Base64 Encoding in Emails</h2>
+      <p class="mb-4 text-gray-600">Embedding Base64 encoded images in emails can improve compatibility across various email clients and reduce the risk of images being blocked or not displayed. This ensures your recipients can view your content as intended.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Security Considerations with Base64 Encoding</h2>
+      <p class="mb-4 text-gray-600">While Base64 encoding can help obfuscate data, it should not be considered a secure method of encryption. Sensitive data should be encrypted using proper encryption algorithms before being encoded into Base64 if necessary.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Base64 Decoding</h2>
+      <p class="mb-4 text-gray-600">Base64 decoding is the process of converting a Base64 encoded string back into its original binary data. This is useful for extracting images or other data embedded in web pages, emails, or other documents.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Base64 Encoding and Performance</h2>
+      <p class="mb-4 text-gray-600">Using Base64 encoding can improve website performance by reducing the number of HTTP requests for images. However, it's essential to balance the performance benefits with the increased file size caused by encoding, especially for larger images.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Base64 Encoding Compatibility</h2>
+      <p class="mb-4 text-gray-600">Most modern web browsers and email clients support Base64 encoded images. However, some older browsers may have limited or no support, so it's important to test your content across various platforms to ensure compatibility.</p>
+    
+      <h2 class="text-2xl font-bold mt-8 mb-4">Benefits of Base64 Encoding</h2>
+      <p class="mb-4 text-gray-600">Base64 encoding can simplify the process of embedding binary data, such as images or fonts, directly into web pages, emails, and other documents. This can help streamline content delivery and improve compatibility across various platforms.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Base64 Encoding in CSS</h2>
+      <p class="mb-4 text-gray-600">Using Base64 encoding in CSS allows you to embed images, fonts, or other binary data directly into your stylesheets, reducing the number of HTTP requests and potentially improving website performance.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Base64 Encoding in JavaScript</h2>
+      <p class="mb-4 text-gray-600">Base64 encoding can be used in JavaScript to manipulate binary data, such as images or files, directly within your scripts. This can be useful for applications that need to process, store, or transmit binary data efficiently.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Data URI Scheme</h2>
+      <p class="mb-4 text-gray-600">The Data URI scheme is a method of embedding binary data directly into web pages, emails, or other documents using Base64 encoding. This can reduce the number of HTTP requests and improve content delivery efficiency.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Base64 Encoding and File Size</h2>
+      <p class="mb-4 text-gray-600">It's essential to consider the impact of Base64 encoding on file size, as encoded data is typically 33% larger than the original binary data. This increase in file size can affect website performance and load times, especially for larger images or other binary data.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Base64 Encoding for API Integration</h2>
+      <p class="mb-4 text-gray-600">Base64 encoding can be useful when working with APIs that require binary data to be transmitted as text. By encoding your data in Base64, you can ensure compatibility and proper handling by the API.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Base64 Encoding in Mobile Applications</h2>
+      <p class="mb-4 text-gray-600">Using Base64 encoding in mobile applications can simplify the process of embedding images or other binary data, reducing the need for external files and streamlining content delivery.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Base64 Encoding Limitations</h2>
+      <p class="mb-4 text-gray-600">While Base64 encoding can be useful in many situations, it's essential to be aware of its limitations, such as increased file size and potential compatibility issues with older browsers or email clients.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">Base64 Encoding in Web Development</h2>
+      <p class="mb-4 text-gray-600">Base64 encoding can be a valuable tool for web developers, allowing them to embed images, fonts, or other binary data directly into HTML, CSS, or JavaScript. This can simplify content delivery and improve website performance in some cases.</p>
+    
     </div>
-  </div>
-  <!-- Footer -->
-<footer class="bg-gray-800 text-center p-4 mt-8 w-full">
-  <p class="text-gray-300 text-sm">
-    &copy; <script>document.write(new Date().getFullYear())</script> - <a href="https://onenetly.com/" class="text-green-500 hover:text-green-300">onenetly.com</a> | All rights reserved.
-  </p>
-</footer>
+</div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-center p-4 mt-8 w-full">
+        <p class="text-gray-300 text-sm">
+          &copy; <script>document.write(new Date().getFullYear())</script> - <a href="https://thenetly.com/" class="text-green-500 hover:text-green-300">thenetly.com</a> | All rights reserved.
+        </p>
+      </footer>      
+
       <script>
-        const inputText = document.getElementById('inputText');
-        const decodedText = document.getElementById('decodedText');
+        const inputImage = document.getElementById('inputImage');
+        const encodedText = document.getElementById('encodedText');
         const copyButton = document.getElementById('copyButton');
+        const dropZone = document.querySelector('.drop-zone');
     
-        function decodeText() {
-          const input = inputText.value;
-          try {
-            const decoded = decodeURIComponent(escape(atob(input)));
-            decodedText.value = decoded;
-          } catch (e) {
-            decodedText.value = 'Invalid Base64 encoded text';
+        inputImage.addEventListener('change', () => {
+          const file = inputImage.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = () => {
+              const base64Image = reader.result;
+              encodedText.value = base64Image;
+            };
+            reader.readAsDataURL(file);
+          } else {
+            encodedText.value = '';
           }
-        }
+        });
     
-        inputText.addEventListener('input', decodeText);
+        dropZone.addEventListener('click', () => {
+          inputImage.click();
+        });
+    
+        dropZone.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.add('drop-zone-hover');
+        });
+    
+        dropZone.addEventListener('dragleave', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.remove('drop-zone-hover');
+        });
+    
+        dropZone.addEventListener('drop', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.remove('drop-zone-hover');
+    
+          const file = e.dataTransfer.files[0];
+          if (file && file.type.startsWith('image/')) {
+            inputImage.files = e.dataTransfer.files;
+          }
+        });
     
         copyButton.addEventListener('click', () => {
-          decodedText.select();
-          decodedText.setSelectionRange(0, 99999); // For mobile devices
+          encodedText.select();
+          encodedText.setSelectionRange(0, 99999);
           document.execCommand('copy');
     
-          // Update button text to "Copied" and revert it back after 2 seconds
           copyButton.textContent = 'Copied';
           setTimeout(() => {
             copyButton.textContent = 'Copy';
           }, 2000);
         });
       </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-54W25R1NPQ"></script>
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0HT945KWHS"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-54W25R1NPQ');
+  gtag('config', 'G-0HT945KWHS');
 </script>
 </body>
 </html>
