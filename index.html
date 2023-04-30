@@ -1,12 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Easily decode your Base64 encoded text with this simple and efficient online tool. Just type or paste your encoded text and get the decoded result instantly.">
+  <meta name="keywords" content="OneNetly, base64, base64 decoder, decode, decoding, online base64 decoder">
+  <link href="./css/output.css" rel="stylesheet">
+  <title>OneNetly - Simple & Efficient Base64 Decoder</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./icon.png">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354746037074515"
+     crossorigin="anonymous"></script>
 </head>
+
 <body>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <a href="/"><span class="ml-3 text-xl">OneNetly</span></a>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <a href="/terms.html" class="mr-5 hover:text-gray-900">Terms and Conditions</a>
+        <a href="/privacy.html" class="mr-5 hover:text-gray-900">Privacy Policy</a>
+        <a href="/disclaimer.html" class="mr-5 hover:text-gray-900">Disclaimer</a>
+        <a href="/contact.html" class="mr-5 hover:text-gray-900">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+<div class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-4">
+
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl">
+      <h1 class="text-3xl font-bold mb-4">Base64 Decoder</h1>
+      <p class="mb-4 text-gray-600">Welcome to our OneNetly Base64 Decoder, a simple and efficient online tool for decoding your Base64 encoded text back into its original format. Just paste your Base64 encoded text and get the decoded result instantly. Perfect for developers and anyone who needs to decode data quickly.</p>
+  
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="inputText">Text to decode:</label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="inputText" type="text" placeholder="Enter Base64 encoded text...">
+      </div>
+      <div class="mt-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="decodedText">Decoded result:</label>
+        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="decodedText" rows="5" readonly></textarea>
+      </div>
+      <button id="copyButton" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4" type="button">Copy</button>
+  
+      <h3 class="text-xl font-bold mt-4 mb-4">The Importance of Base64 Decoding</h3>
+      <p class="mb-4 text-gray-600">Base64 decoding plays a critical role in various applications, as it allows for the retrieval of the original binary data from encoded text. It is used in web development, email attachments, and data serialization to ensure that the binary data remains accessible and functional after being transmitted or stored in a text-based format.</p>
+      <h3 class="text-xl font-bold mt-4 mb-4">Decoding Base64 in Web Applications</h3>
+      <p class="mb-4 text-gray-600">In web applications, Base64 decoding is often used to render embedded images or other binary resources that have been encoded as text. By decoding the Base64 string, the browser can display the original binary data, such as an image or a font, directly on the web page, enhancing the user experience and reducing latency.</p>
+      <h3 class="text-xl font-bold mt-4 mb-4">Base64 Decoding in Email Attachments</h3>
+      <p class="mb-4 text-gray-600">Email protocols typically only support text-based data, which makes Base64 encoding and decoding essential for transmitting binary files as attachments. When an email client receives a message with an encoded attachment, it decodes the Base64 data to reveal the original binary file, allowing the recipient to access and interact with the attachment.</p>
+      <h3 class="text-xl font-bold mt-4 mb-4">Data Serialization with Base64 Decoding</h3>
+      <p class="mb-4 text-gray-600">Base64 decoding is also used in data serialization, a process that involves converting complex data structures into a text-based format for storage or transmission. By utilizing Base64 encoding and decoding, developers can store and retrieve binary data within serialized text formats like JSON and XML, enabling more versatile data management and communication.</p>
+      <h3 class="text-xl font-bold mt-4 mb-4">Decoding Base64 in Programming Languages</h3>
+      <p class="mb-4 text-gray-600">Most modern programming languages, such as Python, JavaScript, and PHP, provide built-in support for Base64 decoding. These libraries offer simple and efficient methods for converting Base64-encoded strings back into their original binary data, making it easy for developers to work with encoded data within their applications.</p>
+      <h3 class="text-xl font-bold mt-4 mb-4">Performance Considerations in Base64 Decoding</h3>
+      <p class="mb-4 text-gray-600">While Base64 decoding is generally efficient, it can become a performance bottleneck when dealing with large amounts of encoded data. Developers should be mindful of the potential impact on performance when using Base64 decoding in their applications and consider alternative solutions, such as binary data streaming, when handling large files or data sets.</p>
+      <h3 class="text-xl font-bold mt-4 mb-4">Error Handling in Base64 Decoding</h3>
+      <p class="mb-4 text-gray-600">When decoding Base64 data, it is essential to implement proper error handling to account for potential issues, such as malformed input or incorrect padding. By incorporating robust error handling mechanisms, developers can ensure that their applications gracefully handle decoding errors and maintain a positive user experience.</p>
+      <h3 class="text-xl font-bold mt-4 mb-4">Security Considerations for Base64 Decoding</h3>
+      <p class="mb-4 text-gray-600">While Base64 decoding itself does not pose any security risks, it is crucial to remember that the decoded data might contain sensitive information or malicious content. Developers should take appropriate security measures, such as validating the decoded data and implementing proper access controls, to protect their applications and users from potential security threats.</p>
+
+      <h3 class="text-xl font-bold mt-4 mb-4">Base64 Decoding in Data Compression</h3>
+      <p class="mb-4 text-gray-600">Base64 decoding can also be employed in data compression techniques, where binary data is first compressed and then encoded as a Base64 string. When decompressing the data, the Base64-encoded string is first decoded back into its binary form before being uncompressed. This approach allows for more efficient storage and transmission of compressed data while maintaining compatibility with text-based systems.</p>
+      <h3 class="text-xl font-bold mt-4 mb-4">Future Developments in Base64 Decoding</h3>
+      <p class="mb-4 text-gray-600">As technology evolves and new data formats and protocols emerge, the role of Base64 decoding may shift or expand. Developers should keep abreast of industry trends and advancements, ensuring that their applications continue to support Base64 decoding efficiently and securely while adapting to new challenges and opportunities in the digital landscape.</p>
+    </div>
+  </div>
+  <!-- Footer -->
+<footer class="bg-gray-800 text-center p-4 mt-8 w-full">
+  <p class="text-gray-300 text-sm">
+    &copy; <script>document.write(new Date().getFullYear())</script> - <a href="https://onenetly.com/" class="text-green-500 hover:text-green-300">onenetly.com</a> | All rights reserved.
+  </p>
+</footer>
+      <script>
+        const inputText = document.getElementById('inputText');
+        const decodedText = document.getElementById('decodedText');
+        const copyButton = document.getElementById('copyButton');
     
+        function decodeText() {
+          const input = inputText.value;
+          try {
+            const decoded = decodeURIComponent(escape(atob(input)));
+            decodedText.value = decoded;
+          } catch (e) {
+            decodedText.value = 'Invalid Base64 encoded text';
+          }
+        }
+    
+        inputText.addEventListener('input', decodeText);
+    
+        copyButton.addEventListener('click', () => {
+          decodedText.select();
+          decodedText.setSelectionRange(0, 99999); // For mobile devices
+          document.execCommand('copy');
+    
+          // Update button text to "Copied" and revert it back after 2 seconds
+          copyButton.textContent = 'Copied';
+          setTimeout(() => {
+            copyButton.textContent = 'Copy';
+          }, 2000);
+        });
+      </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-54W25R1NPQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-54W25R1NPQ');
+</script>
 </body>
 </html>
