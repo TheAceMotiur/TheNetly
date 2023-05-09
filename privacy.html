@@ -23,22 +23,31 @@
 </head>
 
 <body>
-  <header class="text-gray-600 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
-        <a href="/"><span class="ml-3 text-xl">TheNetly</span></a>
-      </a>
-      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <a href="/terms.html" class="mr-5 hover:text-gray-900">Terms and Conditions</a>
-        <a href="/privacy.html" class="mr-5 hover:text-gray-900">Privacy Policy</a>
-        <a href="/disclaimer.html" class="mr-5 hover:text-gray-900">Disclaimer</a>
-        <a href="/contact.html" class="mr-5 hover:text-gray-900">Contact</a>
-      </nav>
+  <nav class="bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex-shrink-0">
+          <a href="/" class="text-white text2xl font-bold">TheNetly</a>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <!-- Add appropriate links for logged-in users and/or administrators here -->
+            <a href="/terms.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Terms</a>
+            <a href="/privacy.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Privacy</a>
+            <a href="/disclaimer.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Disclaimer</a>
+            <a href="/contact.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+          </div>
+        </div>
+        <div class="flex md:hidden">
+          <!-- Mobile menu links -->
+          <a href="/terms.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Terms</a>
+          <a href="/privacy.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Privacy</a>
+          <a href="/disclaimer.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Disclaimer</a>
+          <a href="/contact.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+        </div>
+      </div>
     </div>
-  </header>
+  </nav>  
 
 <!-- Privacy Policy content -->
 <main class="container mx-auto px-4 py-8">
